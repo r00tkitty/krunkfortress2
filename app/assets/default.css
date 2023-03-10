@@ -1,0 +1,55 @@
+body>div:not([class]):not([id])>div:not(:empty):not([class]):not([id]) {
+    display: none;
+}
+
+#curGameInfo:after {
+    content: "Powered by Gatoclient";
+    opacity: 0.7;
+}
+
+#editorBtnM:first-of-type {
+    display: none;
+}
+
+.menuSocialB {
+    display: none;
+}
+
+.gatoKey{
+    width:100px!important;
+}
+
+.settKeyElement {
+    float: left;
+    padding-left: 32px;
+}
+@font-face {
+    font-family: gamefont;
+    src: url(./fonts/tf2build.ttf)
+}
+
+@font-face {
+    font-family: headerfont;
+    src: url(./fonts/tf2build.ttf)
+}
+#chatInput {
+    width: 269px;
+    padding: 6px;
+    padding-left: 10px;
+    margin-top: 0;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.4);
+    border: 2px solid rgba(0,0,0,.1);
+    pointer-events: all;
+    border-radius: 5px;
+    margin-left: 4px;
+    font-family: 'Verdana';
+}
+
+
+
+
+
+.cssImportText{width:379px;padding-left:10px;text-align:left;padding-right:10px;padding-top:5px;padding-bottom:5px;border-radius:4px;margin-right:4px;margin-bottom:-5px;border:none}

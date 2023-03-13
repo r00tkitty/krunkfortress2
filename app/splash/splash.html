@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Fullscreen Video Autoplay Background</title>
+    <style>
+        body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img { width: 600px; }
+
+.fullscreen-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -10;
+}
+
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    
+    <div class="bg-overlay"></div>
+    <video class="fullscreen-video" id="myVideo" autoplay="autoplay">
+        <source src="rootkittenlogofull.mp4">
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+</html>

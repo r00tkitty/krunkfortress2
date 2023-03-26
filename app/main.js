@@ -1,32 +1,59 @@
-const { app, BrowserWindow, protocol, dialog, shell, screen, ipcMain, session } = require('electron');
-const { join } = require('path');
-const Swapper = require("./loaders/swapper");
-const localStorDir = path.join(app.getPath("userData"), "/Local Storage/");
-
-const {
-  autoUpdater
-} = require('electron-updater');
-
-require('v8-compile-cache');
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+const { screen } = require('electron');
 
 
+function createSplashWindow() {
+  const {width, height} = screen.getPrimaryDisplay().size;
 
-
-////////////////////////////////////////////
-const createGameWindow = () => {
-  const win = new BrowserWindow({
-    fullscreen: fullscreenActive,
+  const window = new BrowserWindow({
+  
+    frame: false,
+    width: width * 0.2,
+    height: height * (2 / 9),
+    resizable: false,
     webPreferences: {
-      preload: join(__dirname, './preload/preload.js')
-    }
-  })
+      preload: path.join(__dirname, 'preload.js')
 
-  win.loadURL('https://krunker.io/')
+    }
+  });
+
+  window.loadURL('C:/Users/g20mi/Desktop/Projects/Games/Mods/Krunker/Client/TF2-client/app/splash/splash.html');
+  console.log(height);
+console.log(width);
 }
 
-app.whenReady().then(() => {
-  createGameWindow()
-})
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit()
-})
+function createLogoWindow() {
+  const {screenWidth, screenHeight} = screen.getPrimaryDisplay().workAreaSize;
+
+  const window = new BrowserWindow({
+  
+    fullscreen: true,
+    frame: false,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
+  });
+
+  window.loadURL('C:/Users/g20mi/Desktop/Projects/Games/Mods/Krunker/Client/TF2-client/app/introvid/splash.html');
+}
+
+function createGameWindow() {
+  const {screenWidth, screenHeight} = screen.getPrimaryDisplay().workAreaSize;
+
+  const window = new BrowserWindow({
+    
+    fullscreen: true,
+    frame: false,
+    webPreferences: {
+      
+      preload: path.join(__dirname, 'preload.js')
+    }
+  });
+  
+
+  window.loadURL('https://krunker.io/');
+}
+
+// app.on('ready', createGameWindow);
+app.on('ready', createSplashWindow);

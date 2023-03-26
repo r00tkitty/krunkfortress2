@@ -32,6 +32,7 @@ body>div:not([class]):not([id])>div:not(:empty):not([class]):not([id]) {
     font-family: headerfont;
     src: url(./fonts/tf2build.ttf)
 }
+
 #chatInput {
     width: 269px;
     padding: 6px;
@@ -47,6 +48,18 @@ body>div:not([class]):not([id])>div:not(:empty):not([class]):not([id]) {
     margin-left: 4px;
     font-family: 'Verdana';
 }
+.chatItem {
+    word-wrap: break-word;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 12px;
+    color: #fff;
+    font-size: 14px;
+    max-width: 310px;
+    font-family: 'Verdana';
+}
+
 
 
 

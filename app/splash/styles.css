@@ -1,0 +1,39 @@
+/* THIS SHIT TOOK ME HOURS TO FIND BY DIGGING INTO THE STEAM FOLDERS MAN 
+HOURS OF RESEARCHING THE 5 THOUSAND LINES OF CODE STEAM.STYLES HAS AND MANUALLY TRYING TO REPLYCATE IT AND I WANNA KILL MYSELF NOW
+*/
+body{
+background: rgb(18,26,42);
+/*
+Going off of the info i deciphered from "steam.styles" file 
+background: linear-gradient(180deg, rgba(18,26,42,1) 0%, rgba(50,55,61,1) 8%);
+*/
+
+/*
+background: linear-gradient(180deg, rgba(18,26,42,1) 0%, rgba(42,46,51,1) 8%);
+this is purely based off of color picker 
+*/
+
+background: linear-gradient(180deg, rgba(18,26,42,1) -3%, rgba(42,46,51,1) 8%);
+height: 100vh;
+overflow-y: hidden;
+
+/*TODO: read this shit again. i've did everything and this shit still doesnt look identical enough*/
+
+}
+.mainfont{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 9pt;
+    line-height: 12pt;
+    color: white;
+    margin-top: 6px;
+    margin-left: 0px;
+}
+.icons{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 15pt;
+    line-height: 12pt;
+    color: white;
+    margin-top: 6px;
+    margin-right: 0px;
+    float: right;
+}
